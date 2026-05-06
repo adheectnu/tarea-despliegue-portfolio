@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adhelmar Jhosue | Desarrollador Senior Full Stack</title>
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS (Animaciones) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Configuración de Tailwind y Estilos Personalizados -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#10B981', // Emerald 500
+                        dark: '#0F172A', // Slate 900
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0F172A;
+            color: #F8FAFC;
+        }
+        /* Efecto Glassmorphism */
+        .glass {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        /* Ocultar scrollbar pero mantener funcionalidad */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0F172A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #10B981;
+        }
+    </style>
+</head>
+<body class="antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- Navbar con Glassmorphism -->
+    <nav class="fixed w-full z-50 glass transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-xl font-bold tracking-tighter text-white">Adhelmar<span class="text-primary">.dev</span></a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-gray-300 hover:text-white hover:text-primary transition-colors duration-300 text-sm font-medium">Inicio</a>
+                    <a href="#proyectos" class="text-gray-300 hover:text-white hover:text-primary transition-colors duration-300 text-sm font-medium">Proyectos</a>
+                    <a href="#habilidades" class="text-gray-300 hover:text-white hover:text-primary transition-colors duration-300 text-sm font-medium">Habilidades</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="flex-grow flex items-center justify-center min-h-screen pt-16 relative overflow-hidden">
+        <!-- Elementos decorativos de fondo -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary rounded-full mix-blend-multiply filter blur-[128px] opacity-20"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-20"></div>
+        
+        <div class="text-center z-10 px-4 max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="text-primary font-semibold tracking-wide uppercase text-sm mb-4">Hola, mi nombre es</h2>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">Adhelmar Jhosue.</h1>
+            <h3 class="text-3xl md:text-5xl font-bold text-slate-400 mb-8 tracking-tight">Construyo la web del futuro.</h3>
+            <p class="mt-4 text-lg md:text-xl text-slate-400 mb-10 leading-relaxed">
+                Soy un <span class="text-white font-semibold">Desarrollador Senior Full Stack</span> enfocado en crear experiencias digitales excepcionales, aplicaciones escalables y diseños de alto impacto visual.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#proyectos" class="w-full sm:w-auto px-8 py-4 rounded-full bg-primary text-white font-bold hover:bg-emerald-400 hover:scale-105 transition-all duration-300 shadow-lg shadow-emerald-500/25">
+                    Ver mis proyectos
+                </a>
+                <a href="#contacto" class="w-full sm:w-auto px-8 py-4 rounded-full bg-transparent border border-slate-600 text-white font-bold hover:border-primary hover:text-primary transition-all duration-300">
+                    Contactar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Proyectos (Tarjetas elegantes con hover) -->
+    <section id="proyectos" class="py-24 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-16 text-center flex items-center justify-center gap-4" data-aos="fade-up">
+                <span class="w-12 h-[2px] bg-primary rounded-full"></span>
+                Proyectos Destacados
+                <span class="w-12 h-[2px] bg-primary rounded-full"></span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Proyecto 1 -->
+                <div class="group bg-slate-800/80 rounded-2xl overflow-hidden border border-slate-700 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-slate-700 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-slate-800 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-slate-500 group-hover:text-primary transition-colors duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">Plataforma SaaS Global</h3>
+                        <p class="text-slate-400 mb-5 text-sm leading-relaxed">Arquitectura y desarrollo de una plataforma escalable para gestión empresarial con soporte multi-tenant y analíticas en tiempo real.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 text-xs font-medium bg-slate-900/50 text-emerald-400 border border-emerald-500/20 rounded-full">Node.js</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-slate-900/50 text-emerald-400 border border-emerald-500/20 rounded-full">React</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-slate-900/50 text-emerald-400 border border-emerald-500/20 rounded-full">AWS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="group bg-slate-800/80 rounded-2xl overflow-hidden border border-slate-700 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-slate-700 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-slate-800 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-slate-500 group-hover:text-primary transition-colors duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">E-Commerce Moderno</h3>
+                        <p class="text-slate-400 mb-5 text-sm leading-relaxed">Tienda online de alto rendimiento con integraciones de pago complejas, gestión de inventario y optimización SEO.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 text-xs font-medium bg-slate-900/50 text-emerald-400 border border-emerald-500/20 rounded-full">Next.js</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-slate-900/50 text-emerald-400 border border-emerald-500/20 rounded-full">Tailwind</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-slate-900/50 text-emerald-400 border border-emerald-500/20 rounded-full">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="group bg-slate-800/80 rounded-2xl overflow-hidden border border-slate-700 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 bg-slate-700 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-slate-800 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-slate-500 group-hover:text-primary transition-colors duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">Dashboard Analítico</h3>
+                        <p class="text-slate-400 mb-5 text-sm leading-relaxed">Panel de control interactivo para visualización de grandes volúmenes de datos con gráficos dinámicos y reportes exportables.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 text-xs font-medium bg-slate-900/50 text-emerald-400 border border-emerald-500/20 rounded-full">Vue.js</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-slate-900/50 text-emerald-400 border border-emerald-500/20 rounded-full">Express</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-slate-900/50 text-emerald-400 border border-emerald-500/20 rounded-full">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Habilidades (Badges de colores) -->
+    <section id="habilidades" class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-16 flex items-center justify-center gap-4" data-aos="fade-up">
+                <span class="w-12 h-[2px] bg-primary rounded-full"></span>
+                Stack Tecnológico
+                <span class="w-12 h-[2px] bg-primary rounded-full"></span>
+            </h2>
+            
+            <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+                <!-- Badges con diferentes colores según tecnología -->
+                <span class="px-5 py-2.5 bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 rounded-xl font-medium hover:bg-yellow-500/20 hover:-translate-y-1 transition-all cursor-default shadow-sm">JavaScript (ES6+)</span>
+                <span class="px-5 py-2.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-xl font-medium hover:bg-blue-500/20 hover:-translate-y-1 transition-all cursor-default shadow-sm">TypeScript</span>
+                <span class="px-5 py-2.5 bg-green-500/10 text-green-400 border border-green-500/20 rounded-xl font-medium hover:bg-green-500/20 hover:-translate-y-1 transition-all cursor-default shadow-sm">Node.js</span>
+                <span class="px-5 py-2.5 bg-slate-500/10 text-slate-300 border border-slate-500/20 rounded-xl font-medium hover:bg-slate-500/20 hover:-translate-y-1 transition-all cursor-default shadow-sm">Express.js</span>
+                <span class="px-5 py-2.5 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-xl font-medium hover:bg-cyan-500/20 hover:-translate-y-1 transition-all cursor-default shadow-sm">React</span>
+                <span class="px-5 py-2.5 bg-teal-500/10 text-teal-400 border border-teal-500/20 rounded-xl font-medium hover:bg-teal-500/20 hover:-translate-y-1 transition-all cursor-default shadow-sm">Tailwind CSS</span>
+                <span class="px-5 py-2.5 bg-emerald-600/10 text-emerald-500 border border-emerald-600/20 rounded-xl font-medium hover:bg-emerald-600/20 hover:-translate-y-1 transition-all cursor-default shadow-sm">MongoDB</span>
+                <span class="px-5 py-2.5 bg-sky-600/10 text-sky-400 border border-sky-600/20 rounded-xl font-medium hover:bg-sky-600/20 hover:-translate-y-1 transition-all cursor-default shadow-sm">PostgreSQL</span>
+                <span class="px-5 py-2.5 bg-orange-500/10 text-orange-400 border border-orange-500/20 rounded-xl font-medium hover:bg-orange-500/20 hover:-translate-y-1 transition-all cursor-default shadow-sm">Git / GitHub</span>
+                <span class="px-5 py-2.5 bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 rounded-xl font-medium hover:bg-indigo-500/20 hover:-translate-y-1 transition-all cursor-default shadow-sm">Docker</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Profesional -->
+    <footer class="bg-slate-950 py-12 border-t border-slate-800/50 mt-auto" id="contacto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <a href="#" class="text-2xl font-bold text-white mb-6">Adhelmar<span class="text-primary">.dev</span></a>
+            
+            <div class="flex space-x-6 mb-8">
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-slate-400 hover:text-white hover:bg-primary/20 hover:border-primary/50 border border-transparent transition-all duration-300">
+                    <span class="sr-only">GitHub</span>
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-500/20 hover:border-blue-500/50 border border-transparent transition-all duration-300">
+                    <span class="sr-only">LinkedIn</span>
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
+                </a>
+            </div>
+            <p class="text-slate-500 text-sm text-center font-medium">
+                &copy; 2026 Adhelmar Jhosue. Todos los derechos reservados.<br>
+                <span class="inline-block mt-2">Diseñado y construido con pura lógica y algo de magia ✨</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- AOS JS y Scripts Funcionales -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializar animaciones AOS
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+
+        // Efecto visual dinámico en el Navbar al hacer scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-lg', 'bg-slate-900/95');
+                navbar.classList.remove('glass');
+            } else {
+                navbar.classList.remove('shadow-lg', 'bg-slate-900/95');
+                navbar.classList.add('glass');
+            }
+        });
+    </script>
+</body>
+</html>
